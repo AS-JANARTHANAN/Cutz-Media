@@ -446,15 +446,15 @@ button, input, textarea, select {
 .hero-content {
   position: relative;
   z-index: 2;
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 0 0 58%;
+  max-width: 58%;
 }
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1.08;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .hero h1 .line-2 {
   color: var(--gold);
@@ -463,14 +463,15 @@ button, input, textarea, select {
 }
 .hero-sub {
   font-family: 'Syne', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   max-width: 480px;
+  display: none;
 }
-.hero .eyebrow-text { font-size: 8px; letter-spacing: 0.1em; }
-.hero .eyebrow-line { width: 16px; }
+.hero .eyebrow-text { font-size: 9px; letter-spacing: 0.12em; }
+.hero .eyebrow-line { width: 20px; }
 
 .hero-ctas {
   display: flex;
@@ -479,28 +480,28 @@ button, input, textarea, select {
   margin-bottom: 14px;
 }
 .hero-ctas .btn-gold, .hero-ctas .btn-outline {
-  padding: 10px 14px;
-  font-size: 9px;
+  padding: 10px 16px;
+  font-size: 10px;
   white-space: nowrap;
 }
 .hero-trust {
   font-family: 'Syne', sans-serif;
-  font-size: 8px;
+  font-size: 9px;
   color: var(--text-tertiary);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 /* Hero right: CSS card stack */
 .hero-cards-stack {
   display: flex;
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 42%;
+  max-width: 42%;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 240px;
-  transform: scale(0.5);
-  transform-origin: right center;
+  height: 220px;
+  transform: scale(0.55);
+  transform-origin: center center;
 }
 .hc {
   position: absolute;
@@ -2103,8 +2104,21 @@ button, input, textarea, select {
   :root { --pad-x: 32px; }
 
   .hero { padding: 80px var(--pad-x) 60px; }
-  .hero h1 { font-size: 60px; }
-  .hero-ctas { flex-direction: row; }
+  .hero h1 { font-size: 48px; margin-bottom: 14px; }
+  .hero-sub { display: block; font-size: 14px; line-height: 1.6; }
+  .hero .eyebrow-text { font-size: 10px; }
+  .hero .eyebrow-line { width: 24px; }
+  .hero-ctas { flex-direction: row; gap: 12px; }
+  .hero-ctas .btn-gold, .hero-ctas .btn-outline { padding: 12px 22px; font-size: 12px; }
+  .hero-trust { font-size: 10px; }
+  .hero-content { flex: 0 0 60%; max-width: 60%; }
+  .hero-cards-stack {
+    flex: 0 0 40%;
+    max-width: 40%;
+    height: 280px;
+    transform: scale(0.7);
+    transform-origin: right center;
+  }
 
   .feature-grid { grid-template-columns: repeat(3, 1fr); }
 
