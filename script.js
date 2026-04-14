@@ -75,7 +75,7 @@ function buildCategoryRows() {
           <div class="video-card" onclick="openModal('${cat.id}',${i})">
             <div class="card-thumb" style="position:relative; overflow:hidden;">
               <video src="${v.src}" autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;"></video>
-              <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,8,0.9) 0%, rgba(10,10,8,0) 80%);z-index:1;pointer-events:none;"></div>
+              <div style="position:absolute;inset:0;background:var(--card-gradient-base);z-index:1;pointer-events:none;"></div>
               
               <div style="position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:space-between;">
                 <span class="card-badge">${v.badge}</span>

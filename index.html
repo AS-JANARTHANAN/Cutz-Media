@@ -179,7 +179,7 @@
       <div class="portfolio-card" onclick="location.href='work.html'">
         <div class="portfolio-card-inner">
           <video src="images/personal/3.mp4" autoplay loop muted playsinline class="card-bg-video"></video>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,8,0.9) 0%, rgba(10,10,8,0) 80%);z-index:1;pointer-events:none;"></div>
+          <div style="position:absolute;inset:0;background:var(--card-gradient-base);z-index:1;pointer-events:none;"></div>
           <span class="port-badge">Personal</span>
           <div class="port-play"></div>
           <div class="port-overlay">
@@ -191,7 +191,7 @@
       <div class="portfolio-card" onclick="location.href='work.html'">
         <div class="portfolio-card-inner">
           <video src="images/business/1.mp4" autoplay loop muted playsinline class="card-bg-video"></video>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,8,0.9) 0%, rgba(10,10,8,0) 80%);z-index:1;pointer-events:none;"></div>
+          <div style="position:absolute;inset:0;background:var(--card-gradient-base);z-index:1;pointer-events:none;"></div>
           <span class="port-badge">Business</span>
           <div class="port-play"></div>
           <div class="port-overlay">
@@ -204,7 +204,7 @@
       <div class="portfolio-card" onclick="location.href='work.html'">
         <div class="portfolio-card-inner">
           <video src="images/motion/1.mp4" autoplay loop muted playsinline class="card-bg-video"></video>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,8,0.9) 0%, rgba(10,10,8,0) 80%);z-index:1;pointer-events:none;"></div>
+          <div style="position:absolute;inset:0;background:var(--card-gradient-base);z-index:1;pointer-events:none;"></div>
           <span class="port-badge">Motion</span>
           <div class="port-play"></div>
           <div class="port-overlay">
@@ -216,7 +216,7 @@
       <div class="portfolio-card" onclick="location.href='work.html'">
         <div class="portfolio-card-inner">
           <video src="images/ai/2.mp4" autoplay loop muted playsinline class="card-bg-video"></video>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,8,0.9) 0%, rgba(10,10,8,0) 80%);z-index:1;pointer-events:none;"></div>
+          <div style="position:absolute;inset:0;background:var(--card-gradient-base);z-index:1;pointer-events:none;"></div>
           <span class="port-badge">AI Video</span>
           <div class="port-play"></div>
           <div class="port-overlay">
@@ -421,8 +421,8 @@
 
 <!-- ═══════════ FINAL CTA ═══════════ -->
 <section class="final-cta" style="padding-left:var(--pad-x);padding-right:var(--pad-x);background-image:url('images/cta-bg.jpg');background-size:cover;background-position:center;">
-  <!-- dark overlay for readability -->
-  <div style="position:absolute;inset:0;background:rgba(10,10,8,0.82);z-index:0;"></div>
+  <!-- theme-aware overlay for readability -->
+  <div style="position:absolute;inset:0;background:var(--overlay-heavy);z-index:0;"></div>
   <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
     <h2 class="reveal">Ready to Level Up<br>Your Content?</h2>
     <p class="reveal">Get a custom quote in under 2 minutes.<br>No commitment. No hidden charges.</p>
