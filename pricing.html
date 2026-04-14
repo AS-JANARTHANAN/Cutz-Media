@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — CUT X MEDIA</title>
+<meta name="description" content="Build your custom video editing plan with CUT X MEDIA. Get an instant quote with our interactive pricing calculator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Syne:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pricing-body">
+
+<!-- MOBILE TOP BAR -->
+<div class="mobile-top-bar">
+  <a href="index.html" class="logo-pill"><img src="logo.jpg" alt="CUT X MEDIA"></a>
+</div>
+
+<!-- DESKTOP NAVBAR -->
+<nav class="desktop-nav">
+  <div class="container">
+    <a href="index.html" class="logo-pill"><img src="logo.jpg" alt="CUT X MEDIA"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="nav-quote" onclick="location.href='pricing.html'">Get a Quote</button>
+  </div>
+</nav>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-nav">
+  <a href="index.html" data-page="home">
+    <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h5v-6h4v6h5V10"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="work.html" data-page="work">
+    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+    <span>Work</span>
+  </a>
+  <a href="pricing.html" class="active" data-page="pricing">
+    <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+    <span>Pricing</span>
+  </a>
+  <a href="contact.html" data-page="contact">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Custom Quote</span></div>
+    <h1 class="pricing-head" style="margin-bottom:0;">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:44px;color:var(--text-primary);line-height:1.05;display:block;">Build Your <span style="color:var(--gold);">Custom Plan</span></span>
+    </h1>
+    <p style="font-family:'Syne',sans-serif;font-size:15px;color:var(--text-secondary);margin-top:10px;">Pick your style. Tell us your need. Get an instant quote.</p>
+    <div class="section-rule"></div>
+  </div>
+</div>
+
+<!-- PRICING CALCULATOR -->
+<div class="pricing-section">
+  <div class="container">
+
+    <!-- STEP 1 -->
+    <div class="reveal">
+      <div class="step-label">Step 1 — Select Your Style</div>
+      <div class="style-tags" id="styleTags"></div>
+      <div class="configurator-row">
+        <!-- LEFT: PREVIEW -->
+        <div class="configurator-left">
+          <div class="preview-card" id="previewCard">
+            <div class="preview-thumb" id="previewThumb">
+              <video autoplay loop muted playsinline class="card-bg-video" id="previewVideo"></video>
+              <div class="card-play"></div>
+            </div>
+            <div class="preview-info">
+              <h3 id="previewTitle">—</h3>
+              <div class="preview-price" id="previewPrice">—</div>
+              <div class="variation-list" id="variationList"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: OPTIONS -->
+        <div class="configurator-right">
+          <div class="slider-wrap">
+            <label>Videos Needed Per Month</label>
+            <div class="slider-row">
+              <input type="range" id="videoSlider" min="1" max="30" value="5">
+              <div class="slider-val" id="sliderVal">5</div>
+            </div>
+            <div class="slider-labels"><span>1 VIDEO</span><span>30 VIDEOS</span></div>
+          </div>
+
+          <div class="addons-row">
+            <div class="addon-card" id="addonFast" onclick="toggleAddon('fast')">
+              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+              <div class="addon-title">Fast Delivery</div>
+              <div class="addon-price">+ ₹500 / video</div>
+            </div>
+            <div class="addon-card" id="addonThumb" onclick="toggleAddon('thumb')">
+              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+              <div class="addon-title">Thumbnails</div>
+              <div class="addon-price">+ ₹400 / video</div>
+            </div>
+          </div>
+          <div class="addon-total" id="addonTotal"></div>
+        </div>
+      </div>
+
+      <!-- STEP 2 LABEL -> MOVED TO CONFIGURATOR OR REPURPOSED -->
+      <div class="step-label" style="margin-top: 40px;">Step 2 — Finalize & Request Quote</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Reference Video Link 🔗</label>
+          <input type="url" id="refLink" placeholder="Instagram / TikTok / YouTube link">
+        </div>
+        <div class="form-group">
+          <label>Specific Requirements</label>
+          <textarea id="reqText" placeholder="Tell us about your vision..."></textarea>
+        </div>
+      </div>
+      <div class="form-inline">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="userName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number *</label>
+          <input type="tel" id="userPhone" placeholder="+91 00000 00000" value="+91 ">
+        </div>
+      </div>
+      <div class="form-error" id="formError">Please fill in your name and WhatsApp number (10+ digits).</div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY PRICE BAR (always visible on pricing page) -->
+<div class="sticky-price-bar visible" id="stickyBar">
+  <div>
+    <div class="price-label">Estimated Total</div>
+    <div class="price-amount" id="stickyTotal">₹9,000</div>
+  </div>
+  <button class="btn-wa-quote" id="btnWhatsapp" onclick="sendWhatsApp()">WhatsApp Quote →</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo-pill" style="display:inline-flex;margin-bottom:14px;"><img src="logo.jpg" alt="CUT X MEDIA" style="height:32px;"></a>
+        <p class="footer-tagline">"Every frame, intentional."</p>
+        <div class="footer-contact">
+          <p style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +91 98435 16221</p>
+          <p style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> chopsandcuts2025@gmail.com</p>
+        </div>
+        <a href="https://wa.me/919843516221" target="_blank" class="footer-chat-btn">Chat Now →</a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-links-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 CUT X MEDIA. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
