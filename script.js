@@ -3,6 +3,14 @@
    Works across: work.html + pricing.html
 ═══════════════════════════════════════════════════════════════ */
 
+// ── THEME INITIALIZATION ──
+(function initTheme() {
+  const savedTheme = localStorage.getItem('cutx-theme');
+  if (savedTheme === 'light') {
+    document.documentElement.classList.add('light-theme');
+  }
+})();
+
 // ── DATA ──
 const categories = [
   { id:"personal-branding", label:"Personal Branding", videos:[
@@ -544,3 +552,11 @@ window.addEventListener('resize', () => {
   window._swipeResize = setTimeout(initMobileSwipeDecks, 200);
 });
 document.addEventListener('DOMContentLoaded', initMobileSwipeDecks);
+
+/* ═══════════════════════════════════════════
+   THEME TOGGLE LOGIC
+═══════════════════════════════════════════ */
+function toggleTheme() {
+  const isLight = document.documentElement.classList.toggle('light-theme');
+  localStorage.setItem('cutx-theme', isLight ? 'light' : 'dark');
+}

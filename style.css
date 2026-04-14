@@ -39,6 +39,32 @@
   --radius-sm:     8px;
   --radius-md:     16px;
   --radius-lg:     28px;
+  
+  /* Gradients Base */
+  --hero-gradient-base: linear-gradient(to right, rgba(10,10,8,0.95) 50%, rgba(10,10,8,0.4) 100%);
+  --card-gradient-base: linear-gradient(to top, rgba(10,10,8,0.95), rgba(10,10,8,0.2));
+}
+
+html.light-theme {
+  --bg-primary:    #fdfbf7;
+  --bg-surface:    #ffffff;
+  --bg-surface-2:  #f5f2eb;
+  --bg-surface-3:  #e0dbd3;
+
+  --gold:          #B8963D;
+  --gold-light:    #C9A84C;
+  --gold-dark:     #8C7234;
+  --gold-muted:    rgba(184,150,61,0.15);
+
+  --text-primary:   #181816;
+  --text-secondary: #5b5952;
+  --text-tertiary:  #8a8780;
+
+  --border-subtle: rgba(24,24,22,0.08);
+  --border-mid:    rgba(24,24,22,0.15);
+  --border-gold:   rgba(184,150,61,0.40);
+
+  --hero-gradient-base: linear-gradient(to right, rgba(253,251,247,0.98) 50%, rgba(253,251,247,0.4) 100%);
 }
 
 /* ── RESET ── */
@@ -164,6 +190,36 @@ button, input, textarea, select {
   transition: border-color 200ms ease, color 200ms ease;
 }
 .btn-outline:hover { border-color: var(--border-gold); color: var(--gold); }
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-mid);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.theme-toggle:hover {
+  border-color: var(--border-gold);
+  color: var(--gold);
+}
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.desktop-nav .theme-toggle { margin-left: 16px; }
+.mobile-top-bar .theme-toggle { position: absolute; right: var(--pad-x); }
 
 .btn-whatsapp {
   display: inline-flex;
@@ -471,13 +527,13 @@ button, input, textarea, select {
   border: 1px solid var(--border-gold);
   transform: rotate(-5deg) translateX(0) translateY(10px);
   z-index: 3;
-  background-image: linear-gradient(to top, rgba(10,10,8,0.95), rgba(10,10,8,0.2)), url('images/thumb-personal-branding.webp');
+  background-image: var(--card-gradient-base), url('images/thumb-personal-branding.webp');
 }
 .hc2 {
   border: 1px solid var(--border-mid);
   transform: rotate(2deg) translateY(-20px);
   z-index: 2;
-  background-image: linear-gradient(to top, rgba(10,10,8,0.95), rgba(10,10,8,0.2)), url('images/thumb-motion-graphics.webp');
+  background-image: var(--card-gradient-base), url('images/thumb-motion-graphics.webp');
 }
 .hc3 {
   border: 1px solid var(--border-subtle);
@@ -682,7 +738,7 @@ button, input, textarea, select {
 .port-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(10,10,8,0.95) 0%, transparent 65%);
   padding: 10px;
   z-index: 3;
 }
@@ -690,7 +746,7 @@ button, input, textarea, select {
   font-family: 'Syne', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #F5F0E8;
   margin-bottom: 2px;
 }
 .port-price {
@@ -1332,7 +1388,7 @@ button, input, textarea, select {
   font-family: 'Syne', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #F5F0E8;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1346,7 +1402,7 @@ button, input, textarea, select {
 .card-dur {
   font-family: 'Syne', sans-serif;
   font-size: 10px;
-  color: var(--text-tertiary);
+  color: #9C9990;
   margin-top: 1px;
 }
 
@@ -2097,7 +2153,8 @@ button, input, textarea, select {
     height: 400px;
     transform: scale(1) translateX(0);
   }
-  .hc1 { transform: rotate(-5deg) translateX(-40px) translateY(10px); }
+  .hc1 { transform: rotate(-5deg) translateX(-40px) translateY(10px); background-image: var(--card-gradient-base), url('images/thumb-personal-branding.webp'); }
+  .hc2 { background-image: var(--card-gradient-base), url('images/thumb-motion-graphics.webp'); }
   .hc3 { transform: rotate(9deg) translateX(40px) translateY(10px); }
 
   .what-heading-words { font-size: 52px; }

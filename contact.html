@@ -15,6 +15,9 @@
 <!-- MOBILE TOP BAR -->
 <div class="mobile-top-bar">
   <a href="index.html" class="logo-pill"><img src="logo.jpg" alt="CUT X MEDIA"></a>
+  <button class="theme-toggle" aria-label="Toggle Theme" onclick="toggleTheme()">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+  </button>
 </div>
 
 <!-- DESKTOP NAVBAR -->
@@ -27,7 +30,12 @@
       <a href="pricing.html">Pricing</a>
       <a href="contact.html" class="active">Contact</a>
     </div>
-    <button class="nav-quote" onclick="location.href='pricing.html'">Get a Quote</button>
+    <div style="display:flex; align-items:center;">
+      <button class="nav-quote" onclick="location.href='pricing.html'">Get a Quote</button>
+      <button class="theme-toggle" aria-label="Toggle Theme" onclick="toggleTheme()">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+      </button>
+    </div>
   </div>
 </nav>
 
