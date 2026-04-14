@@ -78,7 +78,7 @@ html.light-theme .hero-bg-word {
 
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-y: scroll; scrollbar-gutter: stable; }
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
