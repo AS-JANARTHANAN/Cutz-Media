@@ -34,6 +34,7 @@
   /* Layout */
   --nav-h-mobile:  60px;
   --nav-h-desktop: 68px;
+  --max-w:         1200px;
   --pad-x:         20px;
   --radius-sm:     8px;
   --radius-md:     16px;
@@ -2026,7 +2027,7 @@ button, input, textarea, select {
   cursor: pointer;
 }
 .footer-chat-btn:hover { background: var(--gold); color: var(--bg-primary); }
-.footer-links { display: flex; gap: 32px; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
 .footer-links-col h4 {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -2245,7 +2246,7 @@ button, input, textarea, select {
 
   .contact-grid-layout { grid-template-columns: 3fr 2fr; }
 
-  .footer-grid { grid-template-columns: 5fr 4fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 80px; }
 }
 
 /* ═══════════════════════════════════════════
@@ -2254,4 +2255,5 @@ button, input, textarea, select {
 @media(min-width:1280px) {
   :root { --pad-x: 0px; }
   .hero h1 { font-size: 88px; }
+  .footer-grid { gap: 120px; }
 }
