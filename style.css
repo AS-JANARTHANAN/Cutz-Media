@@ -852,7 +852,7 @@ button, input, textarea, select {
 .ba-visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 9/16;
+  aspect-ratio: 4/5;
   background: var(--bg-surface-3);
   display: flex;
   align-items: center;
