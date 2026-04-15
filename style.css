@@ -1,31 +1,31 @@
 /* ═══════════════════════════════════════════════════════════════
-   CUT X MEDIA — v2.0 OBSIDIAN × GOLD DESIGN SYSTEM
+   CUT X MEDIA — v3.0 STEEL BLUE × ARCTIC WHITE DESIGN SYSTEM
    Mobile-first: 375px base → 768px → 1024px → 1280px
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── CSS VARIABLES ── */
 :root {
   /* Backgrounds */
-  --bg-primary:    #0A0A08;
-  --bg-surface:    #111110;
-  --bg-surface-2:  #1A1A18;
-  --bg-surface-3:  #242420;
+  --bg-primary:    #1C2B3A;
+  --bg-surface:    #243447;
+  --bg-surface-2:  #1A2D3F;
+  --bg-surface-3:  #162230;
 
-  /* Gold */
-  --gold:          #C9A84C;
-  --gold-light:    #E8C97A;
-  --gold-dark:     #8C7234;
-  --gold-muted:    rgba(201,168,76,0.12);
+  /* Accent – Steel Blue (replaces gold) */
+  --gold:          #2E6FA3;
+  --gold-light:    #5BA3D0;
+  --gold-dark:     #1A4F7A;
+  --gold-muted:    rgba(46,111,163,0.15);
 
   /* Text */
-  --text-primary:   #F5F0E8;
-  --text-secondary: #9C9990;
-  --text-tertiary:  #5C5A55;
+  --text-primary:   #EDF5FA;
+  --text-secondary: #A8C8E0;
+  --text-tertiary:  #6B9AB8;
 
   /* Borders */
-  --border-subtle: rgba(245,240,232,0.06);
-  --border-mid:    rgba(245,240,232,0.12);
-  --border-gold:   rgba(201,168,76,0.30);
+  --border-subtle: rgba(94,163,208,0.10);
+  --border-mid:    rgba(94,163,208,0.20);
+  --border-gold:   rgba(46,111,163,0.40);
 
   /* Semantic */
   --whatsapp-green: #22C55E;
@@ -39,37 +39,37 @@
   --radius-sm:     8px;
   --radius-md:     16px;
   --radius-lg:     28px;
-  
-  --hero-gradient-base: linear-gradient(to right, rgba(10,10,8,0.95) 50%, rgba(10,10,8,0.4) 100%);
-  --card-gradient-base: linear-gradient(to top, rgba(10,10,8,0.95), rgba(10,10,8,0.2));
-  --nav-bg: rgba(10,10,8,0.94);
-  --overlay-heavy: rgba(10,10,8,0.85);
-  --overlay-mid: rgba(10,10,8,0.7);
+
+  --hero-gradient-base: linear-gradient(to right, rgba(28,43,58,0.95) 50%, rgba(28,43,58,0.4) 100%);
+  --card-gradient-base: linear-gradient(to top, rgba(28,43,58,0.95), rgba(28,43,58,0.2));
+  --nav-bg: rgba(28,43,58,0.94);
+  --overlay-heavy: rgba(28,43,58,0.85);
+  --overlay-mid: rgba(28,43,58,0.7);
 }
 
 html.light-theme {
-  --bg-primary:    #fdfbf7;
-  --bg-surface:    #ffffff;
-  --bg-surface-2:  #f5f2eb;
-  --bg-surface-3:  #e0dbd3;
+  --bg-primary:    #EDF5FA;
+  --bg-surface:    #FFFFFF;
+  --bg-surface-2:  #D6EAF5;
+  --bg-surface-3:  #BDD8EE;
 
-  --gold:          #B8963D;
-  --gold-light:    #C9A84C;
-  --gold-dark:     #8C7234;
-  --gold-muted:    rgba(184,150,61,0.15);
+  --gold:          #2E6FA3;
+  --gold-light:    #5BA3D0;
+  --gold-dark:     #1A4F7A;
+  --gold-muted:    rgba(46,111,163,0.12);
 
-  --text-primary:   #181816;
-  --text-secondary: #5b5952;
-  --text-tertiary:  #8a8780;
+  --text-primary:   #1C2B3A;
+  --text-secondary: #3A6280;
+  --text-tertiary:  #5888A0;
 
-  --border-subtle: rgba(24,24,22,0.08);
-  --border-mid:    rgba(24,24,22,0.15);
-  --border-gold:   rgba(184,150,61,0.40);
+  --border-subtle: rgba(28,43,58,0.08);
+  --border-mid:    rgba(28,43,58,0.15);
+  --border-gold:   rgba(46,111,163,0.40);
 
-  --hero-gradient-base: linear-gradient(to right, rgba(253,251,247,0.98) 50%, rgba(253,251,247,0.4) 100%);
-  --nav-bg: rgba(253,251,247,0.94);
-  --overlay-heavy: rgba(253,251,247,0.90);
-  --overlay-mid: rgba(253,251,247,0.70);
+  --hero-gradient-base: linear-gradient(to right, rgba(237,245,250,0.98) 50%, rgba(237,245,250,0.4) 100%);
+  --nav-bg: rgba(237,245,250,0.94);
+  --overlay-heavy: rgba(237,245,250,0.90);
+  --overlay-mid: rgba(237,245,250,0.70);
 }
 
 html.light-theme .hero-bg-word {
@@ -82,7 +82,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-y: scro
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -102,7 +102,7 @@ body::before {
 img, video { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea, select {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   border: none;
   outline: none;
   background: none;
@@ -134,11 +134,12 @@ button, input, textarea, select {
   flex-shrink: 0;
 }
 .eyebrow-text {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
-  color: var(--gold);
+  color: var(--gold-light);
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* ── SECTION RULE ── */
@@ -152,7 +153,7 @@ button, input, textarea, select {
 
 /* ── DISPLAY HEADING ── */
 .display-heading {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.05;
@@ -167,11 +168,11 @@ button, input, textarea, select {
   align-items: center;
   gap: 6px;
   background: var(--gold);
-  color: var(--bg-primary);
+  color: var(--text-primary);
   padding: 14px 28px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
@@ -188,17 +189,17 @@ button, input, textarea, select {
   background: transparent;
   color: var(--text-primary);
   padding: 13px 28px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-mid);
+  border: 1px solid rgba(94,163,208,0.5);
   cursor: pointer;
   transition: border-color 200ms ease, color 200ms ease;
 }
-.btn-outline:hover { border-color: var(--border-gold); color: var(--gold); }
+.btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
 
 /* Theme Toggle Button */
 .theme-toggle {
@@ -215,8 +216,8 @@ button, input, textarea, select {
   transition: all 200ms ease;
 }
 .theme-toggle:hover {
-  border-color: var(--border-gold);
-  color: var(--gold);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
 }
 .theme-toggle svg {
   width: 18px;
@@ -237,9 +238,9 @@ button, input, textarea, select {
   background: var(--whatsapp-green);
   color: #fff;
   padding: 14px 28px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
@@ -258,7 +259,7 @@ button, input, textarea, select {
   justify-content: center;
   height: 52px;
   background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(94,163,208,0.2);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -292,7 +293,7 @@ button, input, textarea, select {
   background: var(--nav-bg);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(94,163,208,0.2);
   z-index: 200;
 }
 .desktop-nav .container {
@@ -307,8 +308,9 @@ button, input, textarea, select {
   align-items: center;
 }
 .nav-links a {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-secondary);
@@ -318,30 +320,30 @@ button, input, textarea, select {
 }
 .nav-links a:hover { color: var(--text-primary); }
 .nav-links a.active {
-  color: var(--gold);
+  color: var(--gold-light);
 }
 .nav-links a.active::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
   height: 1px;
-  background: var(--gold);
+  background: var(--gold-light);
 }
 .nav-quote {
   background: transparent;
-  border: 1px solid var(--gold);
-  color: var(--gold);
+  border: 1px solid var(--gold-light);
+  color: var(--gold-light);
   padding: 9px 20px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background 200ms ease, color 200ms ease;
 }
-.nav-quote:hover { background: var(--gold); color: var(--bg-primary); }
+.nav-quote:hover { background: var(--gold); color: var(--text-primary); }
 
 /* ── MOBILE BOTTOM NAV ── */
 .mobile-nav {
@@ -369,7 +371,7 @@ button, input, textarea, select {
   min-width: 56px;
 }
 .mobile-nav a.active,
-.mobile-nav a:active { color: var(--gold); }
+.mobile-nav a:active { color: var(--gold-light); }
 .mobile-nav a svg {
   width: 22px;
   height: 22px;
@@ -435,7 +437,7 @@ button, input, textarea, select {
   overflow: hidden;
 }
 .hero-bg-word {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(120px, 35vw, 300px);
   font-weight: 700;
   color: var(--text-primary);
@@ -451,19 +453,19 @@ button, input, textarea, select {
   text-align: left;
 }
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.08;
   margin-bottom: 10px;
 }
 .hero h1 .line-2 {
-  color: var(--gold);
+  color: var(--gold-light);
   font-style: italic;
   display: block;
 }
 .hero-sub {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -488,7 +490,7 @@ button, input, textarea, select {
   white-space: nowrap;
 }
 .hero-trust {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 8px;
   color: var(--text-tertiary);
   letter-spacing: 0.02em;
@@ -522,7 +524,7 @@ button, input, textarea, select {
   gap: 4px;
 }
 .hc-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -531,7 +533,7 @@ button, input, textarea, select {
 }
 .hc-icon {
   width: 28px; height: 28px;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 8px;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
 }
@@ -579,14 +581,14 @@ button, input, textarea, select {
   flex-shrink: 0;
 }
 .marquee-track span {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   color: var(--text-secondary);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   flex-shrink: 0;
 }
-.marquee-track .sep { color: var(--gold); }
+.marquee-track .sep { color: var(--gold-light); }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -601,7 +603,7 @@ button, input, textarea, select {
   margin-bottom: 40px;
 }
 .what-heading-words {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 36px;
   color: var(--text-primary);
@@ -612,14 +614,15 @@ button, input, textarea, select {
   line-height: 1.1;
 }
 .what-heading-words .divider {
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 300;
   font-size: 28px;
 }
 .feature-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
 }
 .feature-card {
   background: var(--bg-surface);
@@ -640,7 +643,7 @@ button, input, textarea, select {
   width: 36px;
   height: 36px;
   margin-bottom: 16px;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 .feature-icon svg {
   width: 100%;
@@ -652,14 +655,14 @@ button, input, textarea, select {
   stroke-linejoin: round;
 }
 .feature-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 10px;
 }
 .feature-body {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -672,7 +675,7 @@ button, input, textarea, select {
 }
 .portfolio-heading { margin-bottom: 16px; }
 .portfolio-heading h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: var(--text-primary);
@@ -714,8 +717,8 @@ button, input, textarea, select {
   background-image: repeating-linear-gradient(
     -45deg,
     transparent, transparent 10px,
-    rgba(245,240,232,0.015) 10px,
-    rgba(245,240,232,0.015) 11px
+    rgba(237,245,250,0.015) 10px,
+    rgba(237,245,250,0.015) 11px
   );
 }
 .port-badge {
@@ -723,8 +726,8 @@ button, input, textarea, select {
   top: 10px;
   left: 10px;
   border: 1px solid var(--border-gold);
-  color: var(--gold);
-  font-family: 'Space Mono', monospace;
+  color: var(--gold-light);
+  font-family: 'Poppins', sans-serif;
   font-size: 9px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -740,7 +743,7 @@ button, input, textarea, select {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba(245,240,232,0.6);
+  border: 1.5px solid rgba(237,245,250,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -752,41 +755,41 @@ button, input, textarea, select {
   height: 0;
   border-style: solid;
   border-width: 6px 0 6px 10px;
-  border-color: transparent transparent transparent rgba(245,240,232,0.8);
+  border-color: transparent transparent transparent rgba(237,245,250,0.8);
   margin-left: 2px;
 }
 .port-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(10,10,8,0.95) 0%, transparent 65%);
+  background: linear-gradient(to top, rgba(28,43,58,0.95) 0%, transparent 65%);
   padding: 10px;
   z-index: 3;
 }
 .port-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #F5F0E8;
+  color: #EDF5FA;
   margin-bottom: 2px;
 }
 .port-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 .portfolio-cta {
   text-align: center;
   margin-top: 28px;
 }
 .text-link {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: var(--gold);
+  color: var(--gold-light);
   border-bottom: 1px solid transparent;
   transition: border-color 150ms;
   cursor: pointer;
 }
-.text-link:hover { border-color: var(--gold); }
+.text-link:hover { border-color: var(--gold-light); }
 
 /* ── BEFORE / AFTER ── */
 .before-after {
@@ -795,14 +798,14 @@ button, input, textarea, select {
 }
 .ba-heading { margin-bottom: 12px; }
 .ba-heading h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 36px;
   color: var(--text-primary);
   line-height: 1.1;
 }
 .ba-sub {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 32px;
@@ -816,7 +819,7 @@ button, input, textarea, select {
 }
 .ba-tab {
   padding: 8px 20px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -828,7 +831,7 @@ button, input, textarea, select {
 }
 .ba-tab.active {
   border-color: var(--gold);
-  color: var(--gold);
+  color: var(--gold-light);
   background: var(--gold-muted);
 }
 .ba-panels { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -841,14 +844,14 @@ button, input, textarea, select {
 .ba-panel.after { border-color: var(--border-gold); }
 .ba-panel-badge {
   padding: 12px 16px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-tertiary);
   border-bottom: 1px solid var(--border-subtle);
 }
-.ba-panel.after .ba-panel-badge { color: var(--gold); }
+.ba-panel.after .ba-panel-badge { color: var(--gold-light); }
 .ba-visual {
   position: relative;
   width: 100%;
@@ -875,7 +878,7 @@ button, input, textarea, select {
 }
 .ba-panel-bottom {
   padding: 12px 16px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-subtle);
@@ -894,7 +897,7 @@ button, input, textarea, select {
   background: var(--bg-surface);
 }
 .numbers-heading {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: var(--text-primary);
@@ -913,21 +916,21 @@ button, input, textarea, select {
   border-radius: var(--radius-md);
 }
 .stat-num {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-light);
   line-height: 1;
   margin-bottom: 8px;
 }
 .stat-label-1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
 }
 .stat-label-2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   color: var(--text-secondary);
   margin-top: 2px;
@@ -952,7 +955,7 @@ button, input, textarea, select {
 }
 .value-row:hover { border-color: var(--border-gold); }
 .value-row-text h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 26px;
   color: var(--text-primary);
@@ -960,7 +963,7 @@ button, input, textarea, select {
   line-height: 1.15;
 }
 .value-row-text p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -979,17 +982,17 @@ button, input, textarea, select {
   gap: 6px;
 }
 .value-visual .v-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .value-visual .v-stat {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 
 /* ── PRICING TEASER ── */
@@ -999,13 +1002,13 @@ button, input, textarea, select {
 }
 .pricing-teaser-head { margin-bottom: 12px; }
 .pricing-teaser-head h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 38px;
   color: var(--text-primary);
 }
 .pricing-teaser-sub {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 32px;
@@ -1034,8 +1037,8 @@ button, input, textarea, select {
   left: 50%;
   transform: translateX(-50%);
   background: var(--gold);
-  color: var(--bg-primary);
-  font-family: 'Syne', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1044,9 +1047,9 @@ button, input, textarea, select {
   border-radius: 20px;
 }
 .price-cat-badge {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: var(--gold);
+  color: var(--gold-light);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1064,9 +1067,9 @@ button, input, textarea, select {
   z-index: 1;
 }
 .price-cat-badge {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: var(--gold);
+  color: var(--gold-light);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 1px solid var(--border-gold);
@@ -1076,36 +1079,36 @@ button, input, textarea, select {
   margin-bottom: 12px;
 }
 .price-amount {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-light);
   line-height: 1;
   margin-bottom: 4px;
 }
 .price-per {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 12px;
 }
 .price-desc {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 16px;
 }
 .price-cta-link {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  color: var(--gold);
-  font-weight: 700;
+  color: var(--gold-light);
+  font-weight: 600;
   letter-spacing: 0.04em;
   border-bottom: 1px solid transparent;
   transition: border-color 150ms;
 }
-.price-cta-link:hover { border-color: var(--gold); }
+.price-cta-link:hover { border-color: var(--gold-light); }
 .pricing-cta-banner {
   background: var(--gold-muted);
   border: 1px solid var(--border-gold);
@@ -1117,7 +1120,7 @@ button, input, textarea, select {
   align-items: flex-start;
 }
 .pricing-cta-banner p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: var(--text-primary);
 }
@@ -1128,7 +1131,7 @@ button, input, textarea, select {
   background: var(--bg-primary);
 }
 .process-strip h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: var(--text-primary);
@@ -1150,22 +1153,22 @@ button, input, textarea, select {
   padding: 20px;
 }
 .step-num-text {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  color: var(--gold);
+  color: var(--gold-light);
   opacity: 0.7;
   flex-shrink: 0;
   padding-top: 2px;
 }
 .step-content h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 .step-content p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -1186,13 +1189,13 @@ button, input, textarea, select {
   background: repeating-linear-gradient(
     -45deg,
     transparent, transparent 40px,
-    rgba(201,168,76,0.02) 40px,
-    rgba(201,168,76,0.02) 41px
+    rgba(46,111,163,0.03) 40px,
+    rgba(46,111,163,0.03) 41px
   );
   pointer-events: none;
 }
 .final-cta h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: italic;
   font-size: 40px;
@@ -1203,7 +1206,7 @@ button, input, textarea, select {
   z-index: 1;
 }
 .final-cta p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: var(--text-secondary);
   margin-bottom: 32px;
@@ -1222,7 +1225,7 @@ button, input, textarea, select {
   z-index: 1;
 }
 .trust-row {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   color: var(--text-tertiary);
   letter-spacing: 0.04em;
@@ -1258,9 +1261,9 @@ button, input, textarea, select {
 .cat-tab {
   white-space: nowrap;
   padding: 8px 18px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 20px;
@@ -1274,9 +1277,9 @@ button, input, textarea, select {
 .cat-tab.active {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--bg-primary);
+  color: var(--text-primary);
 }
-.cat-tab:hover:not(.active) { border-color: var(--border-gold); color: var(--gold); }
+.cat-tab:hover:not(.active) { border-color: var(--border-gold); color: var(--gold-light); }
 
 #categoryRows {
   display: grid;
@@ -1311,16 +1314,16 @@ button, input, textarea, select {
   .cat-row-header { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
 }
 .cat-row-header h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: var(--text-primary);
   line-height: 1.1;
 }
 .cat-row-header span {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  color: var(--gold);
+  color: var(--gold-light);
   cursor: pointer;
   letter-spacing: 0.04em;
 }
@@ -1366,17 +1369,17 @@ button, input, textarea, select {
   background-image: repeating-linear-gradient(
     -45deg,
     transparent, transparent 8px,
-    rgba(245,240,232,0.015) 8px,
-    rgba(245,240,232,0.015) 9px
+    rgba(237,245,250,0.015) 8px,
+    rgba(237,245,250,0.015) 9px
   );
 }
 .card-badge {
   position: absolute;
   top: 8px; left: 8px;
   border: 1px solid var(--border-gold);
-  color: var(--gold);
-  background: rgba(10,10,8,0.7);
-  font-family: 'Space Mono', monospace;
+  color: var(--gold-light);
+  background: rgba(28,43,58,0.7);
+  font-family: 'Poppins', sans-serif;
   font-size: 8px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1390,7 +1393,7 @@ button, input, textarea, select {
   transform: translate(-50%,-50%);
   width: 36px; height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba(245,240,232,0.5);
+  border: 1.5px solid rgba(237,245,250,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1401,35 +1404,35 @@ button, input, textarea, select {
   width: 0; height: 0;
   border-style: solid;
   border-width: 6px 0 6px 10px;
-  border-color: transparent transparent transparent rgba(245,240,232,0.8);
+  border-color: transparent transparent transparent rgba(237,245,250,0.8);
   margin-left: 2px;
 }
 .card-info {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   padding: 10px;
-  background: linear-gradient(to top, rgba(10,10,8,0.95), transparent);
+  background: linear-gradient(to top, rgba(28,43,58,0.95), transparent);
   z-index: 3;
 }
 .card-info h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #F5F0E8;
+  color: #EDF5FA;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .card-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-top: 2px;
 }
 .card-dur {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: #9C9990;
+  color: #A8C8E0;
   margin-top: 1px;
 }
 
@@ -1437,7 +1440,7 @@ button, input, textarea, select {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.92);
+  background: rgba(14,22,30,0.95);
   z-index: 300;
   display: none;
   align-items: center;
@@ -1468,7 +1471,7 @@ button, input, textarea, select {
   top: 16px; right: 16px;
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: rgba(10,10,8,0.5);
+  background: rgba(28,43,58,0.6);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -1476,15 +1479,15 @@ button, input, textarea, select {
   cursor: pointer;
   z-index: 20;
   font-size: 18px;
-  color: #fff;
+  color: #EDF5FA;
   transition: transform 0.2s;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(237,245,250,0.1);
 }
-.modal-close:hover { transform: scale(1.1); background: rgba(10,10,8,0.8); }
+.modal-close:hover { transform: scale(1.1); background: rgba(28,43,58,0.9); }
 .modal-video-area {
   position: relative;
   width: 100%;
-  background: #000;
+  background: #111e2a;
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
@@ -1505,21 +1508,21 @@ button, input, textarea, select {
 }
 .modal-details { padding: 20px; }
 .modal-details h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 26px;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 .modal-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 4px;
   font-weight: 700;
 }
 .modal-dur {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 16px;
@@ -1528,8 +1531,8 @@ button, input, textarea, select {
   width: 100%;
   padding: 14px;
   background: var(--gold);
-  color: var(--bg-primary);
-  font-family: 'Syne', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1548,15 +1551,15 @@ button, input, textarea, select {
 .pricing-section { padding: 32px 0 100px; }
 .pricing-head { margin-bottom: 32px; }
 .pricing-head h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: var(--text-primary);
   line-height: 1.1;
 }
-.pricing-head .accent { color: var(--gold); }
+.pricing-head .accent { color: var(--gold-light); }
 .pricing-head p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: var(--text-secondary);
   margin-top: 10px;
@@ -1568,13 +1571,13 @@ button, input, textarea, select {
   .pricing-body { padding-bottom: 80px; }
 }
 .step-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 0.15em;
-  color: var(--gold);
+  color: var(--gold-light);
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 600;
 }
 .configurator-row {
   display: grid;
@@ -1613,9 +1616,9 @@ button, input, textarea, select {
 .style-tag {
   padding: 12px 10px;
   text-align: center;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 20px;
@@ -1625,8 +1628,8 @@ button, input, textarea, select {
   transition: all 200ms;
   -webkit-tap-highlight-color: transparent;
 }
-.style-tag.active { background: var(--gold); border-color: var(--gold); color: var(--bg-primary); }
-.style-tag:hover:not(.active) { border-color: var(--border-gold); color: var(--gold); }
+.style-tag.active { background: var(--gold); border-color: var(--gold); color: var(--text-primary); }
+.style-tag:hover:not(.active) { border-color: var(--border-gold); color: var(--gold-light); }
 .preview-thumb {
   width: 100%;
   padding-top: 177.78%; /* 9:16 vertical */
@@ -1641,7 +1644,7 @@ button, input, textarea, select {
   transform: translate(-50%,-50%);
   width: 48px; height: 48px;
   border-radius: 50%;
-  border: 1.5px solid rgba(245,240,232,0.6);
+  border: 1.5px solid rgba(237,245,250,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1651,20 +1654,20 @@ button, input, textarea, select {
   width: 0; height: 0;
   border-style: solid;
   border-width: 8px 0 8px 14px;
-  border-color: transparent transparent transparent rgba(245,240,232,0.8);
+  border-color: transparent transparent transparent rgba(237,245,250,0.8);
   margin-left: 3px;
 }
 .preview-info { padding: 12px 0 0; }
 .preview-info h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: var(--text-primary);
 }
 .preview-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 700;
   margin: 4px 0 10px;
 }
@@ -1693,33 +1696,33 @@ button, input, textarea, select {
   justify-content: center;
   transition: border-color 200ms;
 }
-.variation-item.active .radio { border-color: var(--gold); }
+.variation-item.active .radio { border-color: var(--gold-light); }
 .variation-item.active .radio::after {
   content: '';
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--gold-light);
 }
 .variation-item .var-name {
   flex: 1;
   min-width: 0;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
   color: var(--text-primary);
   line-height: 1.2;
   word-wrap: break-word;
 }
 .variation-item .var-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 700;
   flex-shrink: 0;
 }
 .step2-section { margin-top: 36px; }
 .slider-wrap { margin: 0 0 16px; }
 .slider-wrap > label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 8px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1754,16 +1757,16 @@ button, input, textarea, select {
   border: 3px solid var(--bg-primary);
 }
 .slider-val {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  color: var(--gold);
+  color: var(--gold-light);
   min-width: 32px;
   text-align: right;
 }
 .slider-labels {
   display: flex;
   justify-content: space-between;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 9px;
   color: var(--text-tertiary);
   margin-top: 4px;
@@ -1786,19 +1789,19 @@ button, input, textarea, select {
 .addon-icon { margin-bottom: 4px; display: flex; justify-content: center; }
 .addon-icon svg { width: 22px !important; height: 22px !important; }
 .addon-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 2px;
 }
 .addon-price {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 9px;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 .addon-total {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   color: var(--text-secondary);
   margin-bottom: 16px;
@@ -1807,11 +1810,12 @@ button, input, textarea, select {
 .form-row { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-group label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-tertiary);
+  font-weight: 600;
 }
 .form-group input,
 .form-group textarea {
@@ -1819,7 +1823,7 @@ button, input, textarea, select {
   border: 1px solid var(--border-mid);
   border-radius: var(--radius-md);
   padding: 12px 14px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-primary);
   transition: border-color 200ms;
@@ -1831,7 +1835,7 @@ button, input, textarea, select {
 .form-group textarea { resize: vertical; min-height: 80px; }
 .form-inline { display: flex; flex-direction: column; gap: 14px; }
 .form-error {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--error);
   font-size: 12px;
   margin-top: 6px;
@@ -1856,25 +1860,25 @@ button, input, textarea, select {
 }
 .sticky-price-bar.visible { display: flex; }
 .sticky-price-bar .price-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-tertiary);
 }
 .sticky-price-bar .price-amount {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 .btn-wa-quote {
   background: var(--whatsapp-green);
   color: #fff;
   padding: 12px 14px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: var(--radius-sm);
   white-space: normal;
   text-align: center;
@@ -1901,7 +1905,7 @@ button, input, textarea, select {
 .contact-section { padding: 32px 0 80px; }
 .contact-hero-head { margin-bottom: 40px; }
 .contact-hero-head h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 52px;
   color: var(--text-primary);
@@ -1919,7 +1923,7 @@ button, input, textarea, select {
   padding: 28px 24px;
 }
 .contact-form-card h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 28px;
   color: var(--text-primary);
@@ -1939,14 +1943,14 @@ button, input, textarea, select {
   margin-bottom: 10px;
 }
 .contact-info-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 .contact-info-value {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 12px;
@@ -1957,19 +1961,19 @@ button, input, textarea, select {
   align-items: center;
   gap: 6px;
   border: 1px solid var(--border-gold);
-  color: var(--gold);
+  color: var(--gold-light);
   padding: 8px 16px;
   border-radius: var(--radius-sm);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 200ms, color 200ms;
   text-decoration: none;
 }
-.contact-detail-btn:hover { background: var(--gold); color: var(--bg-primary); }
+.contact-detail-btn:hover { background: var(--gold); color: var(--text-primary); }
 .contact-detail-btn.wa { border-color: var(--whatsapp-green); color: var(--whatsapp-green); }
 .contact-detail-btn.wa:hover { background: var(--whatsapp-green); color: #fff; }
 
@@ -1979,7 +1983,7 @@ button, input, textarea, select {
   background: var(--bg-surface);
 }
 .process-section h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: var(--text-primary);
@@ -2002,14 +2006,14 @@ button, input, textarea, select {
   margin-bottom: 40px;
 }
 .footer-tagline {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: 18px;
   color: var(--text-secondary);
   margin: 12px 0 16px;
 }
 .footer-contact p {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 6px;
@@ -2019,31 +2023,32 @@ button, input, textarea, select {
   align-items: center;
   gap: 6px;
   border: 1px solid var(--border-gold);
-  color: var(--gold);
+  color: var(--gold-light);
   padding: 8px 16px;
   border-radius: var(--radius-sm);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   margin-top: 12px;
   transition: background 200ms, color 200ms;
   cursor: pointer;
 }
-.footer-chat-btn:hover { background: var(--gold); color: var(--bg-primary); }
+.footer-chat-btn:hover { background: var(--gold); color: var(--text-primary); }
 .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
 .footer-links-col h4 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-tertiary);
+  font-weight: 600;
   margin-bottom: 14px;
 }
 .footer-links-col ul { list-style: none; }
 .footer-links-col ul li { margin-bottom: 10px; }
 .footer-links-col ul li a {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
   transition: color 150ms;
@@ -2053,7 +2058,7 @@ button, input, textarea, select {
   border-top: 1px solid var(--border-subtle);
   padding: 20px var(--pad-x);
   text-align: center;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   color: var(--text-tertiary);
 }
@@ -2095,7 +2100,7 @@ button, input, textarea, select {
     padding: 0;
   }
   .swipe-dot.active {
-    background: var(--gold);
+    background: var(--gold-light);
     transform: scale(1.3);
   }
 }
