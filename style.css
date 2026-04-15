@@ -77,6 +77,75 @@ html.light-theme .hero-bg-word {
   opacity: 0.012;
 }
 
+/* ═══════════════════════════════════════════
+   LIGHT THEME — Override all hardcoded rgba(255,255,255,...) dark-mode whites
+═══════════════════════════════════════════ */
+
+/* Eyebrow & section rules */
+html.light-theme .eyebrow-line          { background: rgba(28,43,58,0.3); }
+html.light-theme .eyebrow-text          { color: var(--gold); }
+html.light-theme .section-rule          { background: rgba(28,43,58,0.25); }
+
+/* Buttons */
+html.light-theme .btn-outline           { color: var(--gold-dark); border-color: rgba(28,43,58,0.30); }
+html.light-theme .btn-outline:hover     { border-color: var(--gold); background: rgba(46,111,163,0.08); }
+html.light-theme .btn-gold              { color: #FFFFFF; }
+
+/* Desktop nav */
+html.light-theme .nav-quote             { color: var(--gold-dark); border-color: rgba(28,43,58,0.30); }
+html.light-theme .nav-quote:hover       { background: var(--gold); color: #FFFFFF; border-color: var(--gold); }
+html.light-theme .nav-links a.active    { color: var(--gold-dark); }
+html.light-theme .nav-links a.active::after { background: var(--gold); }
+
+/* Mobile nav active */
+html.light-theme .mobile-nav a.active,
+html.light-theme .mobile-nav a:active   { color: var(--gold-dark); }
+
+/* Feature cards */
+html.light-theme .feature-card          { border: 1px solid rgba(28,43,58,0.12); border-top: 2px solid var(--gold); }
+html.light-theme .feature-card:hover    { border-color: rgba(28,43,58,0.2); }
+html.light-theme .feature-card:hover    { border-top-color: var(--gold-light); }
+html.light-theme .feature-title         { color: var(--text-primary); }
+
+/* Stat cells */
+html.light-theme .stat-cell             { border: 1px solid rgba(28,43,58,0.10); }
+html.light-theme .stat-num              { color: var(--gold); }
+html.light-theme .stat-label-1          { color: var(--text-primary); }
+
+/* Value visual */
+html.light-theme .value-visual          { border: 1px solid rgba(46,111,163,0.30); }
+html.light-theme .value-visual .v-stat  { color: var(--gold-dark); }
+
+/* Pricing card numbers */
+html.light-theme .price-amount          { color: var(--gold-dark); }
+
+/* Pricing CTA banner */
+html.light-theme .pricing-cta-banner    { background: rgba(46,111,163,0.08); border: 1px solid rgba(46,111,163,0.30); }
+
+/* Process steps */
+html.light-theme .process-step-item     { border: 1px solid rgba(28,43,58,0.10); }
+html.light-theme .step-num-text         { color: var(--gold); opacity: 0.6; }
+
+/* Work page */
+html.light-theme .cat-row-header span   { color: var(--gold); }
+
+/* Sticky price bar */
+html.light-theme .sticky-price-bar      { border-top: 1px solid rgba(46,111,163,0.30); }
+html.light-theme .sticky-price-bar .price-amount { color: var(--gold-dark); }
+
+/* Modal price */
+html.light-theme .modal-price           { color: var(--gold-dark); }
+
+/* Card overlays – keep dark gradient for readability over video */
+html.light-theme .card-info             { background: linear-gradient(to top, rgba(15,30,45,0.95), transparent); }
+html.light-theme .card-info h4          { color: #FFFFFF; }
+html.light-theme .card-badge            { background: rgba(15,30,45,0.70); }
+
+/* Modal close */
+html.light-theme .modal-close           { background: rgba(28,43,58,0.5); border-color: rgba(28,43,58,0.2); }
+
+/* Popular pill stays white on blue — fine in both modes */
+
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-y: scroll; scrollbar-gutter: stable; }
@@ -1035,19 +1104,17 @@ button, input, textarea, select {
 .pricing-card:hover { border-color: var(--border-gold); }
 .pricing-card.featured { border-color: var(--border-gold); }
 .popular-pill {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: inline-block;
   background: var(--gold);
-  color: var(--text-primary);
+  color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 3px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
 .price-cat-badge {
   font-family: 'Poppins', sans-serif;
