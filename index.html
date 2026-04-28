@@ -82,6 +82,9 @@
     style="background-image:url('images/hero-visual.jpg');background-size:cover;background-position:center right;">
     <!-- theme-aware overlay so text stays readable -->
     <div style="position:absolute;inset:0;background:var(--hero-gradient-base);z-index:1;"></div>
+    <!-- Radial glow blobs -->
+    <div style="position:absolute;top:-10%;right:-5%;width:420px;height:420px;background:radial-gradient(circle, rgba(67,97,238,0.10) 0%, transparent 70%);pointer-events:none;z-index:1;"></div>
+    <div style="position:absolute;bottom:-15%;left:-8%;width:380px;height:380px;background:radial-gradient(circle, rgba(67,97,238,0.08) 0%, transparent 70%);pointer-events:none;z-index:1;"></div>
     <div class="hero-bg-text" aria-hidden="true">
       <span class="hero-bg-word">FRAMES</span>
     </div>
@@ -89,8 +92,8 @@
       <div style="display:flex;align-items:center;gap:0;width:100%;">
         <div class="hero-content">
           <div class="eyebrow anim-0">
-            <div class="eyebrow-line"></div>
-            <span class="eyebrow-text">Video Editing</span>
+            <div class="eyebrow-line" style="background:#4361EE;box-shadow:0 0 8px rgba(67,97,238,0.60);"></div>
+            <span class="eyebrow-text" style="color:#7B9BFF;letter-spacing:0.18em;">Video Editing</span>
           </div>
           <h1 class="anim-1">
             Your Content
@@ -105,6 +108,9 @@
         </div>
         <!-- Desktop card stack -->
         <div class="hero-cards-stack anim-5">
+          <!-- Floating badge chips -->
+          <div class="hero-badge-chip chip-24hr">24hr</div>
+          <div class="hero-badge-chip chip-cinematic">Cinematic</div>
           <div class="hc hc1">
             <div class="hc-icon"><svg viewBox="0 0 24 24">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -125,6 +131,17 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══════════ HERO STATS BAR ═══════════ -->
+  <div class="hero-stats-bar">
+    <div class="hero-stats-inner">
+      <span class="hstat"><span class="hstat-dot"></span>200+ Projects</span>
+      <span class="hstat-divider"></span>
+      <span class="hstat"><span class="hstat-dot"></span>5★ Rated</span>
+      <span class="hstat-divider"></span>
+      <span class="hstat"><span class="hstat-dot"></span>Free Revision</span>
+    </div>
+  </div>
 
   <!-- ═══════════ MARQUEE ═══════════ -->
   <div class="marquee-section" aria-hidden="true">
