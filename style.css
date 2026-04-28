@@ -2080,6 +2080,25 @@ button, input, textarea, select {
   font-size: 26px;
   font-weight: 700;
   color: #FFFFFF;
+  display: inline-block;
+}
+.sticky-price-bar .price-amount.discount-flash {
+  animation: discountFlash 0.5s ease-out;
+}
+@keyframes discountFlash {
+  0% { color: var(--gold-light); transform: scale(1.15) translateY(-2px); text-shadow: 0 0 15px rgba(123,155,255,0.8); }
+  100% { color: #FFFFFF; transform: scale(1) translateY(0); text-shadow: 0 0 0 transparent; }
+}
+
+.original-price {
+  display: inline-block;
+}
+.original-price.animate-in {
+  animation: slideDownFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes slideDownFadeIn {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0.6; }
 }
 .btn-wa-quote {
   background: var(--whatsapp-green);

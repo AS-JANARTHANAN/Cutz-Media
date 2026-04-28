@@ -290,16 +290,25 @@ function updateTotal() {
     discountBadgeEl.textContent = discountPercent + '% OFF';
     discountBadgeEl.classList.add('show');
     
-    // Trigger pop burst animation if discount tier changes
+    // Trigger animations if discount tier changes
     if (currentDiscountTier !== discountPercent) {
       discountBadgeEl.classList.remove('pop-burst');
+      originalTotalEl.classList.remove('animate-in');
+      stickyTotalEl.classList.remove('discount-flash');
+      
       void discountBadgeEl.offsetWidth; // force DOM reflow
+      
       discountBadgeEl.classList.add('pop-burst');
+      originalTotalEl.classList.add('animate-in');
+      stickyTotalEl.classList.add('discount-flash');
+      
       currentDiscountTier = discountPercent;
     }
   } else if (originalTotalEl && discountBadgeEl) {
     originalTotalEl.style.display = 'none';
     discountBadgeEl.classList.remove('show', 'pop-burst');
+    originalTotalEl.classList.remove('animate-in');
+    stickyTotalEl.classList.remove('discount-flash');
     currentDiscountTier = 0;
   }
   
