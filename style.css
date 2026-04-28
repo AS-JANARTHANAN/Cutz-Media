@@ -34,7 +34,7 @@
 
   /* Layout */
   --nav-h-mobile:  60px;
-  --nav-h-desktop: 68px;
+  --nav-h-desktop: 80px;
   --max-w:         1200px;
   --pad-x:         20px;
   --radius-sm:     8px;
@@ -377,7 +377,7 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 52px;
+  height: 72px;
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-gold);
   position: sticky;
