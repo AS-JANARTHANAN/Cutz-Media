@@ -42,6 +42,7 @@ let selectedCatIdx = 0;
 let selectedVarIdx = 0;
 let videoCount = 5;
 let addons = { fast: false, thumb: false };
+let currentDiscountTier = 0; // 0, 5, 10
 
 // Restore selection from work page if applicable
 const storedCat = sessionStorage.getItem('quoteCatIdx');
@@ -264,13 +265,44 @@ function toggleAddon(type) {
 }
 
 // ── UPDATE TOTAL ──
+
 function updateTotal() {
   const stickyTotalEl = document.getElementById('stickyTotal');
+  const originalTotalEl = document.getElementById('originalTotal');
+  const discountBadgeEl = document.getElementById('discountBadge');
+
   if (!stickyTotalEl) return;
   const base = categories[selectedCatIdx].videos[selectedVarIdx].price;
   const addonPer = (addons.fast ? 500 : 0) + (addons.thumb ? 400 : 0);
-  const total = (base + addonPer) * videoCount;
-  stickyTotalEl.textContent = fmt(total);
+  const rawTotal = (base + addonPer) * videoCount;
+  
+  let discountPercent = 0;
+  if (videoCount > 15) discountPercent = 10;
+  else if (videoCount > 5) discountPercent = 5;
+  
+  const finalTotal = rawTotal - (rawTotal * (discountPercent / 100));
+  
+  stickyTotalEl.textContent = fmt(finalTotal);
+  
+  if (discountPercent > 0 && originalTotalEl && discountBadgeEl) {
+    originalTotalEl.textContent = fmt(rawTotal);
+    originalTotalEl.style.display = 'inline-block';
+    discountBadgeEl.textContent = discountPercent + '% OFF';
+    discountBadgeEl.classList.add('show');
+    
+    // Trigger pop burst animation if discount tier changes
+    if (currentDiscountTier !== discountPercent) {
+      discountBadgeEl.classList.remove('pop-burst');
+      void discountBadgeEl.offsetWidth; // force DOM reflow
+      discountBadgeEl.classList.add('pop-burst');
+      currentDiscountTier = discountPercent;
+    }
+  } else if (originalTotalEl && discountBadgeEl) {
+    originalTotalEl.style.display = 'none';
+    discountBadgeEl.classList.remove('show', 'pop-burst');
+    currentDiscountTier = 0;
+  }
+  
   const at = document.getElementById('addonTotal');
   if (at) {
     at.textContent = addonPer > 0
@@ -296,7 +328,13 @@ function sendWhatsApp() {
   const cat = categories[selectedCatIdx];
   const v = cat.videos[selectedVarIdx];
   const addonPer = (addons.fast ? 500 : 0) + (addons.thumb ? 400 : 0);
-  const total = (v.price + addonPer) * videoCount;
+  const rawTotal = (v.price + addonPer) * videoCount;
+  
+  let discountPercent = 0;
+  if (videoCount > 15) discountPercent = 10;
+  else if (videoCount > 5) discountPercent = 5;
+  const finalTotal = rawTotal - (rawTotal * (discountPercent / 100));
+  
   const ref = (document.getElementById('refLink') || {}).value?.trim() || '';
   const req = (document.getElementById('reqText') || {}).value?.trim() || '';
   let msg = `🎬 *CUT X MEDIA — Custom Quote Request*\n\n`;
@@ -304,7 +342,14 @@ function sendWhatsApp() {
   msg += `📂 Category: ${cat.label}\n🎞 Variation: ${v.title}\n💰 Base: ${fmt(v.price)} / video\n📊 Videos/month: ${videoCount}\n`;
   if (addons.fast) msg += `⚡ Fast Delivery: +₹500/video\n`;
   if (addons.thumb) msg += `🖼 Thumbnails: +₹400/video\n`;
-  msg += `\n💵 *Estimated Total: ${fmt(total)}*\n`;
+  
+  if (discountPercent > 0) {
+    msg += `\n🎉 *Discount: ${discountPercent}% OFF applied!*\n`;
+    msg += `💵 *Estimated Total: ${fmt(finalTotal)}* ~(was ${fmt(rawTotal)})~\n`;
+  } else {
+    msg += `\n💵 *Estimated Total: ${fmt(finalTotal)}*\n`;
+  }
+  
   if (ref) msg += `\n🔗 Reference: ${ref}`;
   if (req) msg += `\n📝 Requirements: ${req}`;
   window.open('https://wa.me/919843516221?text=' + encodeURIComponent(msg), '_blank');

@@ -153,8 +153,14 @@
 <!-- STICKY PRICE BAR (always visible on pricing page) -->
 <div class="sticky-price-bar visible" id="stickyBar">
   <div>
-    <div class="price-label">Estimated Total</div>
-    <div class="price-amount" id="stickyTotal">₹9,000</div>
+    <div class="price-label" style="display:flex; align-items:center;">
+      Estimated Total 
+      <span id="discountBadge" class="discount-badge"></span>
+    </div>
+    <div style="display:flex; align-items:baseline; gap:8px;">
+      <span id="originalTotal" class="original-price" style="display:none; text-decoration:line-through; font-size:14px; opacity:0.6;"></span>
+      <div class="price-amount" id="stickyTotal">₹9,000</div>
+    </div>
   </div>
   <button class="btn-wa-quote" id="btnWhatsapp" onclick="sendWhatsApp()">WhatsApp Quote →</button>
 </div>
